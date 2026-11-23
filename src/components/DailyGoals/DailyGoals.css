@@ -1,0 +1,260 @@
+
+.daily-goals-card {
+  width: 100%;
+  max-width: 620px;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 18px;
+  background: var(--card-bg, #ffffff);
+  color: var(--text-color, #1e293b);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+}
+
+/* Heading */
+
+.daily-goals-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.daily-goals-eyebrow {
+  margin: 0 0 6px;
+  color: #6366f1;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.daily-goals-heading h2 {
+  margin: 0 0 6px;
+  font-size: 21px;
+}
+
+.daily-goals-heading p:last-child {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+.daily-goals-flame {
+  font-size: 30px;
+  flex-shrink: 0;
+}
+
+/* Daily target */
+
+.daily-goals-target {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.daily-goals-target label,
+.daily-goals-form label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Input styling */
+
+.daily-goals-target input,
+.daily-goals-input-row input {
+  box-sizing: border-box;
+  min-width: 0;
+  padding: 9px 11px;
+  border: 1px solid var(--border-color, #cbd5e1);
+  border-radius: 9px;
+  background: var(--card-bg, #ffffff);
+  color: var(--text-color, #1e293b);
+  font: inherit;
+}
+
+.daily-goals-target input {
+  width: 85px;
+}
+
+/* Progress information */
+
+.daily-goals-progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 9px;
+  font-size: 13px;
+}
+
+.daily-goals-progress-info strong {
+  text-align: right;
+}
+
+/* Progress bar */
+
+.daily-goals-progress-track {
+  height: 10px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--border-color, #e2e8f0);
+}
+
+.daily-goals-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  transition: width 0.3s ease;
+}
+
+.daily-goals-status {
+  margin: 11px 0 19px;
+  font-size: 12px;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+/* Learning time form */
+
+.daily-goals-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.daily-goals-input-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.daily-goals-input-row input {
+  flex: 0 1 160px;
+  width: 160px;
+  max-width: 100%;
+}
+
+/* Original button styling, compact size */
+
+.daily-goals-input-row button {
+  width: fit-content;
+  align-self: flex-start;
+  padding: 9px 18px;
+  border: none;
+  border-radius: 9px;
+  background: #6366f1;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.daily-goals-input-row button:hover {
+  background: #4f46e5;
+}
+
+.daily-goals-input-row button:focus-visible,
+.daily-goals-input-row input:focus-visible,
+.daily-goals-target input:focus-visible {
+  outline: 2px solid #818cf8;
+  outline-offset: 3px;
+}
+
+/* Streak section */
+
+.daily-goals-streak {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding: 12px;
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 12px;
+  background: var(--card-bg, #ffffff);
+}
+
+.daily-goals-streak-icon {
+  font-size: 27px;
+  flex-shrink: 0;
+}
+
+.daily-goals-streak strong {
+  font-size: 18px;
+  color: #f97316;
+}
+
+.daily-goals-streak p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+.daily-goals-success {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* Remove number input spinner arrows */
+
+.daily-goals-input-row input[type="number"]::-webkit-inner-spin-button,
+.daily-goals-input-row input[type="number"]::-webkit-outer-spin-button,
+.daily-goals-target input[type="number"]::-webkit-inner-spin-button,
+.daily-goals-target input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.daily-goals-input-row input[type="number"],
+.daily-goals-target input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+/* Mobile responsiveness */
+
+@media (max-width: 480px) {
+  .daily-goals-card {
+    padding: 17px;
+  }
+
+  .daily-goals-heading h2 {
+    font-size: 19px;
+  }
+
+  .daily-goals-target {
+    flex-wrap: wrap;
+    gap: 9px;
+  }
+
+  .daily-goals-input-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .daily-goals-input-row input {
+    width: 150px;
+    flex: 0 1 150px;
+  }
+
+  .daily-goals-input-row button {
+    width: fit-content;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .daily-goals-progress-fill {
+    transition: none;
+  }
+}

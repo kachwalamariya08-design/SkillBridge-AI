@@ -1,0 +1,353 @@
+
+/* ==============================
+   SKILLBRIDGE AI - WEEKLY ACTIVITY
+   ============================== */
+
+.weekly-activity-card {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 26px;
+  margin: 24px 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  background: #ffffff;
+  color: #172554;
+  box-shadow: 0 5px 20px rgba(23, 37, 84, 0.04);
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  animation: weeklyFadeUp 0.55s ease both;
+}
+
+/* ==============================
+   HEADING
+   ============================== */
+
+.weekly-activity-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.weekly-activity-eyebrow {
+  margin: 0 0 8px;
+  color: #6366f1;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.weekly-activity-heading h2 {
+  margin: 0 0 8px;
+  color: #172554;
+  font-size: clamp(20px, 3vw, 25px);
+  line-height: 1.4;
+}
+
+.weekly-activity-heading p:last-child {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Matching icon colour palette */
+
+.weekly-activity-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #eef2ff;
+  font-size: 25px;
+  transition: transform 0.25s ease;
+}
+
+.weekly-activity-icon:hover {
+  transform: scale(1.06);
+}
+
+/* ==============================
+   WEEKLY SUMMARY
+   ============================== */
+
+.weekly-activity-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 17px;
+  border: 1px solid #e0e7ff;
+  border-radius: 13px;
+  background: #f8f9ff;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.weekly-activity-summary span {
+  color: #526078;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.weekly-activity-summary strong {
+  color: #5b55d9;
+  font-size: 22px;
+  white-space: nowrap;
+}
+
+/* ==============================
+   WEEKLY BAR CHART
+   ============================== */
+
+.weekly-activity-chart {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 12px;
+  height: 190px;
+  padding-top: 12px;
+}
+
+.weekly-activity-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  height: 100%;
+}
+
+.weekly-activity-minutes {
+  min-height: 20px;
+  margin-bottom: 8px;
+  color: #526078;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.weekly-activity-bar-track {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+  max-width: 38px;
+  overflow: hidden;
+  border-radius: 9px;
+  background: #eef0fa;
+}
+
+.weekly-activity-bar {
+  width: 100%;
+  min-height: 0;
+  border-radius: 9px 9px 0 0;
+  background: linear-gradient(180deg, #a5b4fc 0%, #6366f1 100%);
+  transition:
+    height 0.45s ease,
+    filter 0.2s ease;
+  animation: weeklyBarRise 0.65s ease both;
+}
+
+.weekly-activity-bar:hover {
+  filter: brightness(1.08);
+}
+
+.weekly-activity-label {
+  margin-top: 10px;
+  color: #526078;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.weekly-activity-date {
+  margin-top: 4px;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+/* ==============================
+   FRIENDLY FOOTNOTE
+   ============================== */
+
+.weekly-activity-note {
+  margin: 22px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid #e8eaf2;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ==============================
+   ANIMATIONS
+   ============================== */
+
+@keyframes weeklyFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes weeklyBarRise {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* ==============================
+   DARK MODE - PURE BLACK
+   ============================== */
+
+.app-theme.dark .weekly-activity-card {
+  background: #111111;
+  color: #f5f5f5;
+  border-color: #333333;
+  box-shadow: none;
+}
+
+.app-theme.dark .weekly-activity-eyebrow {
+  color: #b8b4ff;
+}
+
+.app-theme.dark .weekly-activity-heading h2 {
+  color: #ffffff;
+}
+
+.app-theme.dark .weekly-activity-heading p:last-child {
+  color: #c7c7c7;
+}
+
+.app-theme.dark .weekly-activity-icon {
+  background: #24213d;
+}
+
+.app-theme.dark .weekly-activity-summary {
+  background: #191919;
+  border-color: #383838;
+}
+
+.app-theme.dark .weekly-activity-summary span {
+  color: #d1d1d1;
+}
+
+.app-theme.dark .weekly-activity-summary strong {
+  color: #c4bfff;
+}
+
+.app-theme.dark .weekly-activity-bar-track {
+  background: #303030;
+}
+
+.app-theme.dark .weekly-activity-bar {
+  background: linear-gradient(180deg, #b8b4ff 0%, #7068e8 100%);
+}
+
+.app-theme.dark .weekly-activity-minutes,
+.app-theme.dark .weekly-activity-label {
+  color: #d1d1d1;
+}
+
+.app-theme.dark .weekly-activity-date {
+  color: #a3a3a3;
+}
+
+.app-theme.dark .weekly-activity-note {
+  color: #c7c7c7;
+  border-top-color: #333333;
+}
+
+/* ==============================
+   TABLETS AND MOBILE
+   ============================== */
+
+@media (max-width: 600px) {
+  .weekly-activity-card {
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  .weekly-activity-heading {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .weekly-activity-heading h2 {
+    font-size: 20px;
+  }
+
+  .weekly-activity-heading p:last-child {
+    font-size: 13px;
+  }
+
+  .weekly-activity-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    font-size: 21px;
+  }
+
+  .weekly-activity-chart {
+    gap: 6px;
+    height: 170px;
+  }
+
+  .weekly-activity-minutes {
+    font-size: 10px;
+  }
+
+  .weekly-activity-label {
+    font-size: 11px;
+  }
+
+  .weekly-activity-summary {
+    padding: 14px;
+  }
+
+  .weekly-activity-summary span {
+    font-size: 13px;
+  }
+
+  .weekly-activity-summary strong {
+    font-size: 19px;
+  }
+
+  .weekly-activity-note {
+    font-size: 12px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  .weekly-activity-card,
+  .weekly-activity-bar {
+    animation: none;
+  }
+
+  .weekly-activity-card *,
+  .weekly-activity-card *::before,
+  .weekly-activity-card *::after {
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,277 @@
+
+/* =====================================
+   GLOBAL RESET
+===================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* =====================================
+   LIGHT THEME - MODERN INDIGO + TEAL
+===================================== */
+
+.app-theme {
+  /* Main colours */
+  --page-bg: #F3F5FF;
+  --card-bg: #FFFFFF;
+  --text-color: #202A44;
+  --muted-color: #69748B;
+  --border-color: #E1E5F0;
+  --input-bg: #FFFFFF;
+
+  /* Brand colours */
+  --accent-color: #5145CD;
+  --secondary-color: #0F9488;
+
+  /* Interactive colours */
+  --accent-hover: #4035B5;
+  --secondary-hover: #0D7C73;
+  --accent-light: #E9E7FF;
+  --secondary-light: #DDF5F0;
+
+  /* Additional UI colours */
+  --success-bg: #E2F5E9;
+  --success-color: #18794E;
+
+  --warning-bg: #FFF0DC;
+  --warning-color: #A45B13;
+
+  --danger-bg: #FCE7EF;
+  --danger-color: #BE3455;
+
+  /* Effects */
+  --card-shadow: 0 4px 16px rgba(32, 42, 68, 0.06);
+  --hover-shadow: 0 8px 24px rgba(81, 69, 205, 0.12);
+
+  --hover-bg: #F0EEFF;
+
+  min-height: 100vh;
+  background-color: var(--page-bg);
+  color: var(--text-color);
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+/* =====================================
+   DARK THEME
+   PRESERVING EXISTING PURE BLACK DESIGN
+===================================== */
+
+.app-theme.dark {
+  --page-bg: #000000;
+  --card-bg: #111111;
+
+  --text-color: #FFFFFF;
+  --muted-color: #D1D1D1;
+  --border-color: #383838;
+  --input-bg: #171717;
+
+  --accent-color: #A5B4FC;
+  --secondary-color: #5EEAD4;
+
+  --accent-hover: #C7D2FE;
+  --secondary-hover: #99F6E4;
+
+  --accent-light: #252044;
+  --secondary-light: #12302D;
+
+  --success-bg: #123323;
+  --success-color: #86EFAC;
+
+  --warning-bg: #382711;
+  --warning-color: #FCD34D;
+
+  --danger-bg: #3A1722;
+  --danger-color: #FDA4AF;
+
+  --card-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  --hover-shadow: 0 8px 24px rgba(165, 180, 252, 0.12);
+
+  --hover-bg: #202020;
+}
+
+/* =====================================
+   MAIN APP LAYOUT
+===================================== */
+
+.app {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--page-bg);
+  color: var(--text-color);
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.app > main {
+  flex: 1;
+}
+
+/* =====================================
+   GENERAL TEXT
+===================================== */
+
+.app-theme h1,
+.app-theme h2,
+.app-theme h3,
+.app-theme h4 {
+  color: var(--text-color);
+}
+
+.app-theme p,
+.app-theme li,
+.app-theme label {
+  color: inherit;
+}
+
+.app-theme small,
+.app-theme .muted {
+  color: var(--muted-color);
+}
+
+/* =====================================
+   NAVBAR
+===================================== */
+
+.app-theme .navbar {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+.app-theme .navbar a {
+  color: inherit;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.app-theme .footer {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+/* =====================================
+   CARDS
+===================================== */
+
+.app-theme .profile-card,
+.app-theme .skill-gap-card,
+.app-theme .dashboard-card,
+.app-theme .roadmap-card,
+.app-theme .service-card {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+/* =====================================
+   FORMS
+===================================== */
+
+.app-theme input,
+.app-theme select,
+.app-theme textarea {
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+.app-theme input::placeholder,
+.app-theme textarea::placeholder {
+  color: var(--muted-color);
+}
+
+/* Input focus */
+
+.app-theme input:focus,
+.app-theme select:focus,
+.app-theme textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px var(--accent-light);
+}
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.app-theme .theme-toggle {
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+/* =====================================
+   LINKS
+===================================== */
+
+.app-theme a {
+  transition: color 0.2s ease;
+}
+
+/* =====================================
+   DARK MODE TEXT AND LINKS
+===================================== */
+
+.app-theme.dark h1,
+.app-theme.dark h2,
+.app-theme.dark h3,
+.app-theme.dark h4,
+.app-theme.dark p,
+.app-theme.dark label,
+.app-theme.dark li,
+.app-theme.dark span {
+  color: inherit;
+}
+
+.app-theme.dark small,
+.app-theme.dark .muted {
+  color: var(--muted-color);
+}
+
+.app-theme.dark a,
+.app-theme.dark button {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.app-theme.dark .navbar-links a,
+.app-theme.dark .navbar-logo,
+.app-theme.dark .navbar-button {
+  color: #FFFFFF;
+}
+
+/* =====================================
+   ACCESSIBILITY
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .app-theme,
+  .app,
+  .app-theme a,
+  .app-theme button {
+    transition: none;
+  }
+}

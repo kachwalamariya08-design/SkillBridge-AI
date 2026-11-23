@@ -1,0 +1,326 @@
+
+/* =========================================
+   SKILLBRIDGE AI - LEARNING STOPWATCH
+========================================= */
+
+.learning-stopwatch-card {
+  width: 100%;
+  min-width: 0;
+  padding: 24px;
+  margin: 20px 0;
+  box-sizing: border-box;
+  background: var(--card-bg, #ffffff);
+  color: var(--text-color, #202a44);
+  border: 1px solid var(--border-color, #e1e5f0);
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(32, 42, 68, 0.045);
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* HEADER */
+
+.learning-stopwatch-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.learning-stopwatch-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: var(--accent-light, #e9e7ff);
+  color: var(--accent-color, #5145cd);
+}
+
+.learning-stopwatch-eyebrow {
+  margin: 0 0 5px;
+  color: var(--accent-color, #5145cd);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.learning-stopwatch-heading h2 {
+  margin: 0;
+  color: var(--text-color, #202a44);
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.learning-stopwatch-description {
+  margin: 17px 0;
+  color: var(--muted-color, #69748b);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* TIMER DISPLAY */
+
+.learning-stopwatch-display {
+  width: 100%;
+  padding: 18px 10px;
+  border: 1px solid var(--border-color, #e1e5f0);
+  border-radius: 13px;
+  background: var(--page-bg, #f3f5ff);
+  color: var(--accent-color, #5145cd);
+  font-family: "Courier New", monospace;
+  font-size: clamp(30px, 4vw, 42px);
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.learning-stopwatch-status {
+  margin: 12px 0 17px;
+  color: var(--muted-color, #69748b);
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ACTION BUTTONS */
+
+.learning-stopwatch-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.learning-stopwatch-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 10px 17px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.learning-stopwatch-actions button:hover {
+  transform: translateY(-2px);
+}
+
+.learning-stopwatch-start {
+  background: var(--accent-color, #5145cd);
+  color: #ffffff;
+}
+
+.learning-stopwatch-start:hover {
+  background: var(--accent-hover, #4035b5);
+}
+
+.learning-stopwatch-pause {
+  background: #fff4df;
+  border-color: #f2d49b !important;
+  color: #9a6410;
+}
+
+.learning-stopwatch-pause:hover {
+  background: #ffebc5;
+}
+
+.learning-stopwatch-stop {
+  background: #fff0f0;
+  border-color: #f3cccc !important;
+  color: #c13d3d;
+}
+
+.learning-stopwatch-stop:hover {
+  background: #ffe1e1;
+}
+
+/* SAVED SESSION MESSAGE */
+
+.learning-stopwatch-saved {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 7px;
+  margin: 15px 0 0;
+  color: #16845d;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.learning-stopwatch-saved svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* RETURN PROMPT */
+
+.learning-stopwatch-prompt {
+  margin-top: 18px;
+  padding: 15px;
+  border: 1px solid var(--border-color, #e1e5f0);
+  border-radius: 12px;
+  background: var(--page-bg, #f3f5ff);
+}
+
+.learning-stopwatch-prompt p {
+  margin: 0 0 12px;
+  color: var(--text-color, #202a44);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.learning-stopwatch-prompt > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.learning-stopwatch-prompt button {
+  padding: 8px 13px;
+  border: 1px solid var(--accent-color, #5145cd);
+  border-radius: 8px;
+  background: var(--accent-color, #5145cd);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.learning-stopwatch-prompt button:last-child {
+  background: transparent;
+  color: var(--accent-color, #5145cd);
+}
+
+/* =========================================
+   DARK MODE - PURE BLACK
+========================================= */
+
+.app-theme.dark .learning-stopwatch-card {
+  background: #101010;
+  color: #f5f5f5;
+  border-color: #292929;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+}
+
+.app-theme.dark .learning-stopwatch-icon {
+  background: #24213d;
+  color: #c4bfff;
+}
+
+.app-theme.dark .learning-stopwatch-eyebrow {
+  color: #b8b4ff;
+}
+
+.app-theme.dark .learning-stopwatch-heading h2 {
+  color: #ffffff;
+}
+
+.app-theme.dark .learning-stopwatch-description,
+.app-theme.dark .learning-stopwatch-status {
+  color: #c7c7c7;
+}
+
+.app-theme.dark .learning-stopwatch-display {
+  background: #080808;
+  border-color: #383838;
+  color: #b8b4ff;
+}
+
+.app-theme.dark .learning-stopwatch-pause {
+  background: #332813;
+  border-color: #59451f !important;
+  color: #f5cf83;
+}
+
+.app-theme.dark .learning-stopwatch-pause:hover {
+  background: #43341a;
+}
+
+.app-theme.dark .learning-stopwatch-stop {
+  background: #351b1b;
+  border-color: #633030 !important;
+  color: #ffaaaa;
+}
+
+.app-theme.dark .learning-stopwatch-stop:hover {
+  background: #482020;
+}
+
+.app-theme.dark .learning-stopwatch-saved {
+  color: #6ed6ad;
+}
+
+.app-theme.dark .learning-stopwatch-prompt {
+  background: #080808;
+  border-color: #383838;
+}
+
+.app-theme.dark .learning-stopwatch-prompt p {
+  color: #f1f1f1;
+}
+
+.app-theme.dark .learning-stopwatch-prompt button:last-child {
+  color: #b8b4ff;
+  border-color: #7770e8;
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 560px) {
+  .learning-stopwatch-card {
+    padding: 19px;
+    margin: 14px 0;
+  }
+
+  .learning-stopwatch-heading h2 {
+    font-size: 18px;
+  }
+
+  .learning-stopwatch-display {
+    padding: 16px 8px;
+    font-size: 32px;
+    letter-spacing: 2px;
+  }
+
+  .learning-stopwatch-actions {
+    gap: 8px;
+  }
+
+  .learning-stopwatch-actions button {
+    padding: 9px 13px;
+    font-size: 12px;
+  }
+
+  .learning-stopwatch-prompt {
+    padding: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .learning-stopwatch-card,
+  .learning-stopwatch-actions button {
+    transition: none;
+  }
+
+  .learning-stopwatch-actions button:hover {
+    transform: none;
+  }
+}

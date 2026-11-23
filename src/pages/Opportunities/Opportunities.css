@@ -1,0 +1,981 @@
+/* =====================================
+   SKILLBRIDGE AI - OPPORTUNITIES PAGE
+   ===================================== */
+
+.opportunities-page {
+  min-height: 75vh;
+  padding: 55px 7%;
+  background: var(--page-bg, #f3f5ff);
+  color: var(--text-color, #202a44);
+  font-family: Arial, sans-serif;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.opportunities-header {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 40px;
+}
+
+.opportunities-label {
+  display: inline-block;
+  color: var(--accent-color, #5145cd);
+  background: var(--accent-light, #e9e7ff);
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.opportunities-header h1 {
+  font-size: 36px;
+  margin: 18px 0 12px;
+  color: var(--text-color, #202a44);
+}
+
+.opportunities-header p {
+  color: var(--muted-color, #69748b);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.opportunities-search {
+  max-width: 950px;
+  margin: 0 auto 45px;
+  display: flex;
+  gap: 14px;
+}
+
+.opportunities-search input,
+.opportunities-search select {
+  padding: 15px 17px;
+  border: 1px solid var(--border-color, #e1e5f0);
+  border-radius: 12px;
+  background: var(--input-bg, #fff);
+  color: var(--text-color, #202a44);
+  font-size: 14px;
+  outline: none;
+}
+
+.opportunities-search input {
+  flex: 1;
+  min-width: 0;
+}
+
+.opportunities-search select {
+  min-width: 190px;
+  cursor: pointer;
+}
+
+.opportunities-search input:focus,
+.opportunities-search select:focus {
+  border-color: var(--accent-color, #5145cd);
+}
+
+.opportunities-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.opportunities-section-heading h2 {
+  font-size: 23px;
+  margin: 0 0 8px;
+}
+
+.opportunities-section-heading p {
+  color: var(--muted-color, #69748b);
+  font-size: 13px;
+  margin: 0;
+}
+
+.saved-count {
+  color: var(--accent-color, #5145cd);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.opportunities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.opportunity-card {
+  background: var(--card-bg, #fff);
+  border: 1px solid var(--border-color, #e1e5f0);
+  border-radius: 17px;
+  padding: 23px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.opportunity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(40, 45, 90, 0.08);
+}
+
+.opportunity-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.company-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: var(--accent-light, #e9e7ff);
+  color: var(--accent-color, #5145cd);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.save-job-button {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border-color, #e1e5f0);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--muted-color, #69748b);
+  font-size: 21px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.save-job-button:hover,
+.save-job-button.job-saved {
+  color: var(--accent-color, #5145cd);
+  border-color: var(--accent-color, #5145cd);
+}
+
+.opportunity-type {
+  display: inline-block;
+  padding: 6px 11px;
+  border-radius: 20px;
+  background: var(--secondary-light, #ddf5f0);
+  color: var(--secondary-color, #0f9488);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.opportunity-card h3 {
+  margin: 15px 0 8px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.opportunity-company {
+  color: var(--muted-color, #69748b);
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.opportunity-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: var(--muted-color, #69748b);
+  font-size: 12px;
+  margin-bottom: 18px;
+}
+
+.opportunity-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.opportunity-skills span {
+  padding: 6px 10px;
+  border-radius: 7px;
+  background: var(--hover-bg, #f3f5ff);
+  color: var(--text-color, #202a44);
+  font-size: 11px;
+}
+
+.demo-listing-note {
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-color, #e1e5f0);
+  color: var(--muted-color, #69748b);
+  font-size: 11px;
+}
+
+.no-opportunities {
+  text-align: center;
+  padding: 55px 20px;
+  background: var(--card-bg, #fff);
+  border: 1px solid var(--border-color, #e1e5f0);
+  border-radius: 15px;
+}
+
+.no-opportunities p {
+  color: var(--muted-color, #69748b);
+  font-size: 14px;
+}
+
+/* Dark mode */
+
+.app-theme.dark .opportunities-page {
+  background: #000;
+  color: #f1f1f1;
+}
+
+.app-theme.dark .opportunities-header h1,
+.app-theme.dark .opportunities-section-heading h2,
+.app-theme.dark .opportunity-card h3 {
+  color: #f1f1f1;
+}
+
+.app-theme.dark .opportunities-label,
+.app-theme.dark .company-icon {
+  background: #211b38;
+  color: #a99aff;
+}
+
+.app-theme.dark .opportunities-search input,
+.app-theme.dark .opportunities-search select,
+.app-theme.dark .opportunity-card,
+.app-theme.dark .no-opportunities {
+  background: #111;
+  color: #f1f1f1;
+  border-color: #303030;
+}
+
+.app-theme.dark .opportunity-type {
+  background: #211b38;
+  color: #b8aaff;
+}
+
+.app-theme.dark .opportunity-skills span {
+  background: #202020;
+  color: #ddd;
+}
+
+.app-theme.dark .save-job-button {
+  border-color: #444;
+  color: #ccc;
+}
+
+.app-theme.dark .save-job-button:hover,
+.app-theme.dark .save-job-button.job-saved {
+  color: #a99aff;
+  border-color: #a99aff;
+}
+
+/* Responsive design */
+
+@media (max-width: 1000px) {
+  .opportunities-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .opportunities-page {
+    padding: 40px 5%;
+  }
+
+  .opportunities-header h1 {
+    font-size: 28px;
+  }
+
+  .opportunities-search {
+    flex-direction: column;
+  }
+
+  .opportunities-search select {
+    width: 100%;
+  }
+
+  .opportunities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .opportunities-section-heading h2 {
+    font-size: 19px;
+  }
+}
+
+/* Profile-based recommendations */
+
+.profile-match-banner {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 11px 18px;
+  border-radius: 10px;
+  background: var(--accent-light, #e9e7ff);
+  color: var(--accent-color, #5145cd);
+  font-size: 13px;
+}
+
+.role-match-label {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 6px 10px;
+  border-radius: 7px;
+  background: var(--accent-light, #e9e7ff);
+  color: var(--accent-color, #5145cd);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.opportunity-skills span.matching-skill {
+  background: var(--secondary-light, #ddf5f0);
+  color: var(--secondary-color, #0f9488);
+  font-weight: 700;
+}
+
+.matching-skills-note {
+  margin-top: 13px;
+  color: var(--muted-color, #69748b);
+  font-size: 12px;
+}
+
+.app-theme.dark .profile-match-banner,
+.app-theme.dark .role-match-label {
+  background: #211b38;
+  color: #b8aaff;
+}
+
+.app-theme.dark .opportunity-skills span.matching-skill {
+  background: #211b38;
+  color: #b8aaff;
+}
+/* Opportunity view filters */
+
+.opportunity-view-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.opportunity-view-filters button {
+  padding: 10px 17px;
+  border: 1px solid var(--border-color, #e1e5f0);
+  border-radius: 9px;
+  background: var(--card-bg, #fff);
+  color: var(--text-color, #202a44);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.opportunity-view-filters button.active {
+  background: var(--accent-color, #5145cd);
+  color: #fff;
+  border-color: var(--accent-color, #5145cd);
+}
+
+.app-theme.dark .opportunity-view-filters button {
+  background: #111;
+  color: #eee;
+  border-color: #333;
+}
+
+.app-theme.dark .opportunity-view-filters button.active {
+  background: #5145cd;
+  color: #fff;
+  border-color: #5145cd;
+}
+
+/* =====================================
+   LIVE JOB CARD IMPROVEMENTS
+   ===================================== */
+
+/* Job description */
+
+.job-description {
+  margin: 15px 0;
+  color: var(--muted-color, #69748b);
+  font-size: 13px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+/* Salary information */
+
+.job-salary {
+  display: inline-block;
+  margin: 12px 0 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--accent-light, #e9e7ff);
+  color: var(--accent-color, #5145cd);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* Posting date */
+
+.job-posted-date {
+  margin: 15px 0;
+  color: var(--muted-color, #69748b);
+  font-size: 12px;
+}
+
+/* Apply button */
+
+.apply-job-button {
+  display: block;
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px 16px;
+  box-sizing: border-box;
+  border: 1px solid var(--accent-color, #5145cd);
+  border-radius: 10px;
+  background: var(--accent-color, #5145cd);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.25s ease;
+}
+
+.apply-job-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Live listings note */
+
+.live-listings-note {
+  margin-top: 28px;
+  text-align: center;
+  color: var(--muted-color, #69748b);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Error / retry button */
+
+.no-opportunities button {
+  margin-top: 15px;
+  padding: 11px 22px;
+  border: none;
+  border-radius: 9px;
+  background: var(--accent-color, #5145cd);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Dark mode */
+
+.app-theme.dark .job-description,
+.app-theme.dark .job-posted-date {
+  color: #aaa;
+}
+
+.app-theme.dark .job-salary {
+  background: #211b38;
+  color: #b8aaff;
+}
+
+.app-theme.dark .apply-job-button {
+  background: #5145cd;
+  border-color: #5145cd;
+  color: #fff;
+}
+
+.app-theme.dark .live-listings-note {
+  color: #999;
+}
+
+/* Better card spacing */
+
+.opportunity-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.opportunity-card .apply-job-button {
+  margin-top: auto;
+}
+
+.opportunity-card .job-description {
+  overflow-wrap: anywhere;
+}
+
+/* Responsive improvements */
+
+@media (max-width: 650px) {
+  .job-description {
+    font-size: 12px;
+  }
+
+  .apply-job-button {
+    padding: 13px;
+  }
+
+  .live-listings-note {
+    padding: 0 8px;
+  }
+}
+
+/* =====================================
+   JOB DETAILS POPUP
+===================================== */
+
+.view-job-details-button {
+  width: 100%;
+  margin: 12px 0;
+  padding: 11px 16px;
+  border: 1px solid #5b55d9;
+  border-radius: 9px;
+  background: transparent;
+  color: #5b55d9;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.view-job-details-button:hover {
+  background: #5b55d9;
+  color: #ffffff;
+}
+
+.job-details-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+.job-details-modal {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 35px;
+  border-radius: 18px;
+  background: #ffffff;
+  color: #172554;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  animation: jobModalAppear 0.25s ease;
+}
+
+.job-details-modal h2 {
+  margin: 18px 35px 8px 0;
+  font-size: 25px;
+  line-height: 1.4;
+}
+
+.job-details-modal h3 {
+  margin: 25px 0 10px;
+  font-size: 17px;
+}
+
+.job-details-description {
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.8;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+.close-job-details {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: #172554;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.close-job-details:hover {
+  background: #e2e8f0;
+}
+
+@keyframes jobModalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Dark mode */
+.dark .job-details-modal {
+  background: #000000;
+  color: #f8fafc;
+  border: 1px solid #333333;
+}
+
+.dark .job-details-description {
+  color: #cbd5e1;
+}
+
+.dark .close-job-details {
+  background: #222222;
+  color: #ffffff;
+}
+
+.dark .close-job-details:hover {
+  background: #333333;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .job-details-overlay {
+    padding: 10px;
+  }
+
+  .job-details-modal {
+    max-height: 90vh;
+    padding: 25px 20px;
+  }
+
+  .job-details-modal h2 {
+    font-size: 21px;
+  }
+}
+/* =====================================
+   JOB MATCH SCORE
+===================================== */
+
+.job-match-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 12px 0;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #eef2ff;
+  border: 1px solid #c7d2fe;
+}
+
+.job-match-info strong {
+  color: #4f46e5;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.job-match-info span {
+  color: #475569;
+  font-size: 13px;
+}
+
+/* Dark mode */
+
+.dark .job-match-info {
+  background: #171717;
+  border-color: #3730a3;
+}
+
+.dark .job-match-info strong {
+  color: #a5b4fc;
+}
+
+.dark .job-match-info span {
+  color: #cbd5e1;
+}
+/* =====================================
+   JOB SKILL ANALYSIS
+===================================== */
+
+.job-skill-analysis {
+  margin: 14px 0;
+}
+
+.job-skill-analysis h4 {
+  margin-bottom: 9px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.job-skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.job-skill-tags span {
+  padding: 6px 11px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.job-skill-tags.matched span {
+  background: #e0e7ff;
+  color: #4338ca;
+  border: 1px solid #c7d2fe;
+}
+
+.job-skill-tags.missing span {
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #fed7aa;
+}
+
+/* Dark mode */
+
+.dark .job-skill-analysis h4 {
+  color: #f1f5f9;
+}
+
+.dark .job-skill-tags.matched span {
+  background: #1e1b4b;
+  color: #c7d2fe;
+  border-color: #3730a3;
+}
+
+.dark .job-skill-tags.missing span {
+  background: #292019;
+  color: #fdba74;
+  border-color: #78350f;
+}
+/* =====================================
+   POPUP JOB MATCH ANALYSIS
+===================================== */
+
+.popup-match-score {
+  margin: 15px 0 22px;
+  padding: 18px;
+  border-radius: 12px;
+  background: #eef2ff;
+  border: 1px solid #c7d2fe;
+}
+
+.popup-match-score strong {
+  display: block;
+  color: #4f46e5;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.popup-match-score p {
+  margin: 0;
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.job-details-modal h4 {
+  margin: 17px 0 10px;
+  font-size: 14px;
+  color: #334155;
+}
+
+/* Dark mode */
+
+.dark .popup-match-score {
+  background: #171717;
+  border-color: #3730a3;
+}
+
+.dark .popup-match-score strong {
+  color: #a5b4fc;
+}
+
+.dark .popup-match-score p {
+  color: #cbd5e1;
+}
+
+.dark .job-details-modal h4 {
+  color: #f1f5f9;
+}
+
+
+/* =====================================
+   COMPACT JOB OPPORTUNITY CARDS
+===================================== */
+
+.opportunities-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.opportunity-card-compact {
+  padding: 18px;
+  min-width: 0;
+  gap: 0;
+  border-radius: 14px;
+}
+
+.opportunity-card-compact:hover {
+  transform: translateY(-3px);
+}
+
+.opportunity-card-compact .opportunity-card-top {
+  margin-bottom: 10px;
+}
+
+.opportunity-card-compact .company-icon {
+  width: 39px;
+  height: 39px;
+  font-size: 17px;
+}
+
+.opportunity-card-compact .save-job-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+}
+
+.opportunity-card-compact .opportunity-type {
+  align-self: flex-start;
+  padding: 5px 9px;
+  font-size: 10px;
+}
+
+.opportunity-card-compact h3 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.opportunity-card-compact .opportunity-company {
+  margin: 0 0 13px;
+  font-size: 13px;
+}
+
+.compact-job-info {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 15px;
+}
+
+.compact-job-info span {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--muted-color, #69748b);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.compact-job-info svg {
+  flex-shrink: 0;
+  color: var(--accent-color, #5b55d9);
+}
+
+.compact-job-skills {
+  margin-bottom: 13px;
+}
+
+.compact-job-skills > strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: var(--text-color, #202a44);
+}
+
+.compact-job-skills .opportunity-skills {
+  gap: 6px;
+}
+
+.compact-job-skills .opportunity-skills span {
+  padding: 5px 8px;
+  font-size: 10px;
+}
+
+.compact-job-skills .more-skills {
+  background: var(--accent-light, #e9e7ff);
+  color: var(--accent-color, #5145cd);
+  font-weight: 700;
+}
+
+.compact-no-skills {
+  margin: 0;
+  color: var(--muted-color, #69748b);
+  font-size: 12px;
+}
+
+.opportunity-card-compact .view-job-details-button {
+  margin: auto 0 0;
+  padding: 10px 14px;
+  font-size: 13px;
+}
+
+/* Compact card dark mode */
+
+.app-theme.dark .compact-job-skills > strong {
+  color: #f1f1f1;
+}
+
+.app-theme.dark .compact-job-skills .more-skills {
+  background: #211b38;
+  color: #b8aaff;
+}
+
+/* Job details popup refinements */
+
+.job-details-modal .opportunity-details span,
+.job-details-modal .job-salary,
+.job-details-modal .job-posted-date {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.job-details-modal .opportunity-details {
+  margin-top: 15px;
+}
+
+.job-details-modal .apply-job-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+/* Responsive card layout */
+
+@media (max-width: 1000px) {
+  .opportunities-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .opportunities-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .opportunity-card-compact {
+    padding: 17px;
+  }
+}
+
+@media (max-width: 380px) {
+  .opportunity-card-compact {
+    padding: 14px;
+  }
+
+  .opportunity-card-compact h3 {
+    font-size: 15px;
+  }
+}

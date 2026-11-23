@@ -1,0 +1,481 @@
+
+/* =====================================
+   SKILLBRIDGE AI - PROFILE PAGE
+===================================== */
+
+.profile-page {
+  width: 100%;
+  min-height: 75vh;
+  box-sizing: border-box;
+  padding: 55px 24px 70px;
+  background: var(--page-bg, #f3f5ff);
+  color: var(--text-color, #202a44);
+  font-family: Arial, sans-serif;
+  transition: background 0.25s ease, color 0.25s ease;
+  overflow-x: hidden;
+}
+
+/* Profile Header */
+
+.profile-hero {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto 36px;
+  text-align: center;
+  animation: profileFadeIn 0.5s ease both;
+}
+
+.profile-eyebrow {
+  color: var(--accent-color, #5145cd);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  line-height: 1.5;
+}
+
+.profile-hero h1 {
+  color: var(--text-color, #202a44);
+  font-size: clamp(28px, 5vw, 43px);
+  line-height: 1.25;
+  margin: 17px 0 13px;
+  letter-spacing: -0.6px;
+}
+
+.profile-hero > p:last-child {
+  color: var(--muted-color, #69748b);
+  line-height: 1.8;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* Profile Form Card */
+
+.profile-card {
+  width: 100%;
+  max-width: 650px;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--card-bg, #ffffff);
+  color: var(--text-color, #202a44);
+  border: 1px solid var(--border-color, #e1e5f0);
+  border-radius: 18px;
+  box-shadow: 0 8px 28px rgba(32, 42, 68, 0.06);
+  animation: profileFadeIn 0.6s ease 0.08s both;
+  transition: background 0.25s ease, border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.profile-card label {
+  color: var(--text-color, #202a44);
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+/* Input Fields and Dropdowns */
+
+.profile-card input,
+.profile-card select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid var(--border-color, #e1e5f0);
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  background: var(--input-bg, #ffffff);
+  color: var(--text-color, #202a44);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.profile-card select {
+  cursor: pointer;
+}
+
+.profile-card select:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.profile-card input::placeholder {
+  color: var(--muted-color, #69748b);
+  opacity: 0.8;
+}
+
+.profile-card input:focus,
+.profile-card select:focus {
+  border-color: var(--accent-color, #5145cd);
+  box-shadow: 0 0 0 3px rgba(81, 69, 205, 0.12);
+}
+
+.profile-card select option {
+  background: var(--card-bg, #ffffff);
+  color: var(--text-color, #202a44);
+}
+
+/* Custom Course / Career Input */
+
+.profile-card input:not(:first-of-type) {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+/* Skills Selection */
+
+.profile-skill-section {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.profile-skill-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.profile-skill-section-heading h3 {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.profile-skill-section-heading span {
+  color: var(--muted-color);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.profile-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px;
+  margin-top: 5px;
+}
+
+.profile-skill {
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  background: var(--page-bg, #f3f5ff);
+  border: 1px solid var(--border-color, #e1e5f0);
+  border-radius: 10px;
+  color: var(--muted-color, #69748b);
+  cursor: pointer;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.2s ease, border-color 0.2s ease,
+    color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.profile-skill:hover {
+  border-color: var(--accent-color, #5145cd);
+  transform: translateY(-2px);
+}
+
+.profile-skill.selected {
+  background: var(--accent-light, #e9e7ff);
+  border-color: var(--accent-color, #5145cd);
+  color: var(--accent-color, #5145cd);
+  font-weight: 700;
+  box-shadow: 0 3px 10px rgba(81, 69, 205, 0.08);
+}
+
+.profile-skill:focus-visible {
+  outline: 3px solid rgba(81, 69, 205, 0.25);
+  outline-offset: 3px;
+}
+
+.profile-skills-divider {
+  width: 100%;
+  height: 1px;
+  margin: 24px 0;
+  background: var(--border-color);
+}
+
+.profile-empty-skills {
+  margin: 0;
+  color: var(--muted-color, #69748b);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Selected Skills Count */
+
+.profile-skill-count {
+  color: var(--muted-color, #69748b);
+  font-size: 13px;
+  margin: 5px 0;
+}
+
+/* Submit Button */
+
+.profile-primary-button {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent-color, #5145cd);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.profile-primary-button:hover {
+  background: var(--accent-hover, #4035b5);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(81, 69, 205, 0.2);
+}
+
+.profile-primary-button:active {
+  transform: scale(0.99);
+}
+
+.profile-primary-button:focus-visible {
+  outline: 3px solid rgba(81, 69, 205, 0.3);
+  outline-offset: 3px;
+}
+
+/* =====================================
+   DARK MODE - PURE BLACK + PURPLE
+===================================== */
+
+.app-theme.dark .profile-page {
+  background: #000000;
+  color: #f8fafc;
+}
+
+.app-theme.dark .profile-eyebrow {
+  color: #aaa3ff;
+}
+
+.app-theme.dark .profile-hero h1 {
+  color: #ffffff;
+}
+
+.app-theme.dark .profile-hero > p:last-child {
+  color: #a1a1aa;
+}
+
+.app-theme.dark .profile-card {
+  background: #101010;
+  color: #ffffff;
+  border-color: #292929;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
+}
+
+.app-theme.dark .profile-card label {
+  color: #f8fafc;
+}
+
+.app-theme.dark .profile-card input,
+.app-theme.dark .profile-card select {
+  background: #18181b;
+  color: #ffffff;
+  border-color: #3f3f46;
+}
+
+.app-theme.dark .profile-card input::placeholder {
+  color: #a1a1aa;
+}
+
+.app-theme.dark .profile-card input:focus,
+.app-theme.dark .profile-card select:focus {
+  border-color: #8178f5;
+  box-shadow: 0 0 0 3px rgba(129, 120, 245, 0.15);
+}
+
+.app-theme.dark .profile-card select option {
+  background: #18181b;
+  color: #ffffff;
+}
+
+.app-theme.dark .profile-skill {
+  background: #18181b;
+  border-color: #3f3f46;
+  color: #d4d4d8;
+}
+
+.app-theme.dark .profile-skill:hover {
+  border-color: #8178f5;
+}
+
+.app-theme.dark .profile-skill.selected {
+  background: #29245c;
+  border-color: #8178f5;
+  color: #d3d0ff;
+  box-shadow: 0 3px 10px rgba(81, 69, 205, 0.12);
+}
+
+.app-theme.dark .profile-skill-count,
+.app-theme.dark .profile-empty-skills {
+  color: #a1a1aa;
+}
+
+.app-theme.dark .profile-skill-section-heading h3 {
+  color: #f8fafc;
+}
+
+.app-theme.dark .profile-skill-section-heading span {
+  color: #a1a1aa;
+}
+
+.app-theme.dark .profile-skills-divider {
+  background: #383838;
+}
+
+.app-theme.dark .profile-primary-button {
+  background: #5145cd;
+  color: #ffffff;
+}
+
+.app-theme.dark .profile-primary-button:hover {
+  background: #6257e5;
+}
+
+/* =====================================
+   TABLET RESPONSIVENESS
+===================================== */
+
+@media (max-width: 900px) {
+  .profile-page {
+    padding: 45px 25px 60px;
+  }
+
+  .profile-card {
+    max-width: 620px;
+  }
+}
+
+/* =====================================
+   MOBILE RESPONSIVENESS
+===================================== */
+
+@media (max-width: 600px) {
+  .profile-page {
+    padding: 35px 16px 45px;
+  }
+
+  .profile-hero {
+    margin-bottom: 26px;
+  }
+
+  .profile-eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.4px;
+  }
+
+  .profile-hero h1 {
+    font-size: 29px;
+    margin: 14px 0;
+  }
+
+  .profile-hero > p:last-child {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .profile-card {
+    padding: 23px 19px;
+    border-radius: 15px;
+    gap: 11px;
+  }
+
+  .profile-card input,
+  .profile-card select {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .profile-skills-grid {
+    gap: 9px;
+  }
+
+  .profile-skill {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+
+  .profile-primary-button {
+    padding: 14px 10px;
+  }
+}
+
+/* =====================================
+   SMALL MOBILE SCREENS
+===================================== */
+
+@media (max-width: 380px) {
+  .profile-page {
+    padding: 28px 12px 40px;
+  }
+
+  .profile-hero h1 {
+    font-size: 25px;
+  }
+
+  .profile-card {
+    padding: 19px 14px;
+  }
+
+  .profile-skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-skill {
+    padding: 13px;
+  }
+}
+
+/* =====================================
+   ANIMATIONS
+===================================== */
+
+@keyframes profileFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-page,
+  .profile-card,
+  .profile-skill,
+  .profile-primary-button {
+    animation: none;
+    transition: none;
+  }
+
+  .profile-skill:hover,
+  .profile-primary-button:hover,
+  .profile-primary-button:active {
+    transform: none;
+  }
+}

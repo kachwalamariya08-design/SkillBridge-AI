@@ -1,0 +1,1527 @@
+
+/* =========================================
+   PROFESSIONAL READINESS PAGE
+========================================= */
+
+.readiness-page {
+  min-height: 75vh;
+  padding: 45px 6% 70px;
+  background: var(--page-bg, #f8fafc);
+  color: var(--text-color, #172554);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.readiness-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.readiness-hero {
+  padding: 42px;
+  border-radius: 22px;
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border-color, #e2e8f0);
+  margin-bottom: 28px;
+}
+
+.readiness-hero-icon,
+.readiness-module-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #5b55d9;
+  background: rgba(91, 85, 217, 0.1);
+  border-radius: 14px;
+}
+
+.readiness-hero-icon {
+  width: 58px;
+  height: 58px;
+  margin-bottom: 22px;
+}
+
+.readiness-eyebrow {
+  color: #5b55d9;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+.readiness-hero h1 {
+  max-width: 750px;
+  font-size: clamp(27px, 4vw, 38px);
+  line-height: 1.25;
+  margin: 0 0 14px;
+}
+
+.readiness-hero > p:last-child {
+  max-width: 720px;
+  color: var(--secondary-text, #64748b);
+  font-size: 15px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* =========================================
+   OVERVIEW / PROGRESS
+========================================= */
+
+.readiness-overview {
+  padding: 27px;
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 18px;
+  margin-bottom: 42px;
+}
+
+.readiness-overview-heading,
+.readiness-progress-info,
+.readiness-card-footer,
+.readiness-module-progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.readiness-overview-heading {
+  margin-bottom: 22px;
+}
+
+.readiness-overview-heading h2,
+.readiness-section-heading h2 {
+  font-size: 21px;
+  margin: 0 0 7px;
+}
+
+.readiness-overview-heading p,
+.readiness-section-heading p {
+  color: var(--secondary-text, #64748b);
+  font-size: 14px;
+  margin: 0;
+}
+
+.readiness-overview-heading > svg {
+  color: #5b55d9;
+}
+
+.readiness-progress-info {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.readiness-progress-info span,
+.readiness-module-progress span,
+.readiness-card-footer span {
+  color: var(--secondary-text, #64748b);
+}
+
+.readiness-progress-info strong {
+  color: #5b55d9;
+}
+
+.readiness-progress-track {
+  width: 100%;
+  height: 8px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--progress-bg, #e9eaf2);
+}
+
+.readiness-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: #5b55d9;
+  transition: width 0.35s ease;
+}
+
+/* =========================================
+   MODULE CARDS
+========================================= */
+
+.readiness-section-heading {
+  margin-bottom: 20px;
+}
+
+.readiness-module-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.readiness-module-card {
+  width: 100%;
+  min-width: 0;
+  padding: 25px;
+  text-align: left;
+  color: inherit;
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 18px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.readiness-module-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(91, 85, 217, 0.45);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
+}
+
+.readiness-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 21px;
+}
+
+.readiness-card-top > svg {
+  color: var(--secondary-text, #64748b);
+}
+
+.readiness-module-icon {
+  width: 49px;
+  height: 49px;
+}
+
+.readiness-module-card h3 {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.readiness-module-card > p {
+  min-height: 52px;
+  color: var(--secondary-text, #64748b);
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0 0 24px;
+}
+
+.readiness-card-footer {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.readiness-card-footer span:last-child {
+  color: #5b55d9;
+  font-weight: 700;
+}
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.readiness-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 15px;
+  margin-bottom: 25px;
+  color: var(--text-color, #172554);
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.readiness-back-button:hover {
+  color: #5b55d9;
+  border-color: #5b55d9;
+}
+
+/* =========================================
+   MODULE / LESSON HEADER
+========================================= */
+
+.readiness-lesson-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.readiness-lesson-header .readiness-module-icon {
+  width: 58px;
+  height: 58px;
+}
+
+.readiness-lesson-header h1 {
+  font-size: clamp(24px, 3vw, 31px);
+  margin: 0 0 9px;
+}
+
+.readiness-lesson-header > div:last-child > p:last-child {
+  color: var(--secondary-text, #64748b);
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* =========================================
+   CONTENT CARD
+========================================= */
+
+.readiness-content-card {
+  padding: 30px;
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 18px;
+  margin-bottom: 25px;
+}
+
+.readiness-content-card h2 {
+  font-size: 19px;
+  margin: 0 0 13px;
+}
+
+.readiness-content-card > p {
+  color: var(--secondary-text, #64748b);
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0 0 28px;
+}
+
+.readiness-points {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0;
+  margin: 0 0 30px;
+  list-style: none;
+}
+
+.readiness-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.readiness-points li svg {
+  flex-shrink: 0;
+  color: #5b55d9;
+  margin-top: 2px;
+}
+
+/* =========================================
+   PRACTICAL EXAMPLE
+========================================= */
+
+.readiness-example {
+  padding: 23px;
+  background: var(--page-bg, #f8fafc);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-left: 4px solid #5b55d9;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.readiness-example h3 {
+  font-size: 16px;
+  margin: 0 0 13px;
+}
+
+.readiness-example p {
+  color: var(--secondary-text, #64748b);
+  font-size: 14px;
+  line-height: 1.9;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+/* =========================================
+   COMPLETION BUTTON
+========================================= */
+
+.readiness-complete-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 13px 20px;
+  color: #ffffff;
+  background: #5b55d9;
+  border: 1px solid #5b55d9;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.readiness-complete-button:hover {
+  background: #4942c5;
+  transform: translateY(-1px);
+}
+
+.readiness-complete-button.completed {
+  color: #5b55d9;
+  background: rgba(91, 85, 217, 0.1);
+}
+
+/* =========================================
+   LESSON LIST
+========================================= */
+
+.readiness-lesson-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.readiness-lesson-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  padding: 17px;
+  color: inherit;
+  text-align: left;
+  background: var(--page-bg, #f8fafc);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.readiness-lesson-item:hover {
+  border-color: #5b55d9;
+  transform: translateX(3px);
+}
+
+.readiness-lesson-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 37px;
+  height: 37px;
+  color: #5b55d9;
+  background: rgba(91, 85, 217, 0.1);
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.readiness-lesson-name {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.readiness-lesson-name strong {
+  font-size: 14px;
+}
+
+.readiness-lesson-name small {
+  color: var(--secondary-text, #64748b);
+  font-size: 12px;
+}
+
+.readiness-lesson-item > svg {
+  flex-shrink: 0;
+  color: var(--secondary-text, #64748b);
+}
+
+.readiness-lesson-item .readiness-lesson-number svg {
+  color: #5b55d9;
+}
+
+/* =========================================
+   LESSON NAVIGATION
+========================================= */
+
+.readiness-lesson-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.readiness-lesson-navigation button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  color: var(--secondary-text, #64748b);
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 9px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.readiness-lesson-navigation button.active {
+  color: #5b55d9;
+  border-color: #5b55d9;
+}
+
+/* =========================================
+   DARK THEME
+========================================= */
+
+.app-theme.dark .readiness-page {
+  --page-bg: #000000;
+  --card-bg: #101010;
+  --text-color: #f1f1f1;
+  --secondary-text: #a1a1aa;
+  --border-color: #292929;
+  --progress-bg: #292929;
+}
+
+.app-theme.dark .readiness-module-card:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+}
+
+.app-theme.dark .readiness-example {
+  background: #151515;
+}
+
+.app-theme.dark .readiness-lesson-item {
+  background: #151515;
+}
+
+.app-theme.dark .readiness-module-icon,
+.app-theme.dark .readiness-hero-icon {
+  background: rgba(91, 85, 217, 0.16);
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+  .readiness-page {
+    padding: 30px 5% 50px;
+  }
+
+  .readiness-hero {
+    padding: 28px;
+  }
+
+  .readiness-module-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .readiness-module-card > p {
+    min-height: auto;
+  }
+
+  .readiness-content-card {
+    padding: 23px;
+  }
+}
+
+@media (max-width: 480px) {
+  .readiness-page {
+    padding: 24px 4% 40px;
+  }
+
+  .readiness-hero {
+    padding: 23px;
+  }
+
+  .readiness-hero h1 {
+    font-size: 26px;
+  }
+
+  .readiness-overview {
+    padding: 20px;
+  }
+
+  .readiness-overview-heading h2,
+  .readiness-section-heading h2 {
+    font-size: 18px;
+  }
+
+  .readiness-lesson-header {
+    gap: 12px;
+  }
+
+  .readiness-lesson-header .readiness-module-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .readiness-lesson-header h1 {
+    font-size: 22px;
+  }
+
+  .readiness-content-card {
+    padding: 19px;
+  }
+
+  .readiness-example {
+    padding: 17px;
+  }
+
+  .readiness-complete-button {
+    width: 100%;
+  }
+
+  .readiness-progress-info {
+    font-size: 12px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+.readiness-page button:focus-visible {
+  outline: 3px solid rgba(91, 85, 217, 0.5);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .readiness-page *,
+  .readiness-page *::before,
+  .readiness-page *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* =========================================
+   PRACTICE EXERCISES
+========================================= */
+
+.practice-section {
+  margin-top: 55px;
+  padding-bottom: 35px;
+}
+
+.practice-heading {
+  margin-bottom: 28px;
+}
+
+.practice-heading-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  color: var(--accent-color, #5b55d9);
+  background: rgba(91, 85, 217, 0.1);
+  border-radius: 14px;
+}
+
+.practice-heading h2 {
+  margin: 8px 0 10px;
+  color: var(--text-primary, #172554);
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.practice-heading > p:last-child {
+  max-width: 680px;
+  color: var(--text-secondary, #64748b);
+  line-height: 1.7;
+}
+
+.practice-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.practice-card {
+  min-width: 0;
+  padding: 25px;
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.practice-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-color, #5b55d9);
+  box-shadow: 0 9px 24px rgba(15, 23, 42, 0.07);
+}
+
+.practice-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.practice-card-header > svg {
+  flex-shrink: 0;
+  color: var(--accent-color, #5b55d9);
+}
+
+.practice-module {
+  display: inline-block;
+  margin-bottom: 9px;
+  color: var(--accent-color, #5b55d9);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.practice-card-header h3 {
+  margin: 0;
+  color: var(--text-primary, #172554);
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.practice-scenario,
+.practice-instructions {
+  padding: 16px;
+  margin-bottom: 16px;
+  background: var(--section-bg, #f8fafc);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 12px;
+}
+
+.practice-scenario h4,
+.practice-instructions h4,
+.practice-sample-answer h4 {
+  margin: 0 0 8px;
+  color: var(--text-primary, #172554);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.practice-scenario p,
+.practice-instructions p {
+  margin: 0;
+  color: var(--text-secondary, #64748b);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.practice-field-label {
+  display: block;
+  margin: 20px 0 9px;
+  color: var(--text-primary, #172554);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.practice-textarea {
+  display: block;
+  width: 100%;
+  min-height: 160px;
+  padding: 14px;
+  resize: vertical;
+  box-sizing: border-box;
+  color: var(--text-primary, #172554);
+  background: var(--input-bg, #ffffff);
+  border: 1px solid var(--border-color, #dbe2ea);
+  border-radius: 11px;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.7;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.practice-textarea:focus {
+  border-color: var(--accent-color, #5b55d9);
+  box-shadow: 0 0 0 3px rgba(91, 85, 217, 0.12);
+}
+
+.practice-textarea::placeholder {
+  color: var(--text-secondary, #94a3b8);
+  opacity: 0.8;
+}
+
+.practice-answer-status {
+  margin-top: 8px;
+  color: var(--text-secondary, #64748b);
+  font-size: 12px;
+}
+
+.practice-self-assessment {
+  margin-top: 24px;
+  padding: 18px;
+  background: var(--section-bg, #f8fafc);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 12px;
+}
+
+.practice-assessment-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.practice-assessment-heading > div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.practice-assessment-heading svg {
+  color: var(--accent-color, #5b55d9);
+}
+
+.practice-assessment-heading h4 {
+  margin: 0;
+  color: var(--text-primary, #172554);
+  font-size: 15px;
+}
+
+.practice-assessment-heading > span {
+  color: var(--accent-color, #5b55d9);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.practice-self-assessment > p {
+  margin: 0 0 14px;
+  color: var(--text-secondary, #64748b);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.practice-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.practice-checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--text-primary, #172554);
+  font-size: 13px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.practice-checklist-item input {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin: 2px 0 0;
+  accent-color: var(--accent-color, #5b55d9);
+  cursor: pointer;
+}
+
+.practice-sample-button {
+  width: 100%;
+  min-height: 44px;
+  margin-top: 20px;
+  padding: 11px 16px;
+  color: #ffffff;
+  background: var(--accent-color, #5b55d9);
+  border: 1px solid var(--accent-color, #5b55d9);
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.practice-sample-button:hover {
+  filter: brightness(1.08);
+}
+
+.practice-sample-button:active {
+  transform: scale(0.99);
+}
+
+.practice-sample-answer {
+  margin-top: 16px;
+  padding: 18px;
+  background: var(--section-bg, #f8fafc);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 12px;
+}
+
+.practice-sample-answer pre {
+  margin: 0;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: var(--text-secondary, #64748b);
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   DARK THEME
+========================================= */
+
+.app-theme.dark .practice-card {
+  background: #080808;
+  border-color: #252525;
+  box-shadow: none;
+}
+
+.app-theme.dark .practice-card:hover {
+  border-color: var(--accent-color, #7770ed);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+}
+
+.app-theme.dark .practice-scenario,
+.app-theme.dark .practice-instructions,
+.app-theme.dark .practice-self-assessment,
+.app-theme.dark .practice-sample-answer {
+  background: #111111;
+  border-color: #292929;
+}
+
+.app-theme.dark .practice-textarea {
+  background: #101010;
+  border-color: #303030;
+  color: #f5f5f5;
+}
+
+.app-theme.dark .practice-textarea::placeholder {
+  color: #777777;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 850px) {
+  .practice-list {
+    grid-template-columns: 1fr;
+  }
+
+  .practice-card {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .practice-section {
+    margin-top: 38px;
+  }
+
+  .practice-heading h2 {
+    font-size: 22px;
+  }
+
+  .practice-card {
+    padding: 17px;
+    border-radius: 14px;
+  }
+
+  .practice-card-header h3 {
+    font-size: 17px;
+  }
+
+  .practice-assessment-heading {
+    align-items: flex-start;
+  }
+}
+/* =========================================
+   SKILLBRIDGE AI - ADVANCED READINESS STYLES
+   Add this stylesheet alongside the existing
+   ProfessionalReadiness.css file.
+========================================= */
+
+/* Shared advanced metadata */
+.readiness-meta-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 14px 0 20px;
+}
+
+.readiness-level,
+.readiness-meta-row > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  padding: 6px 10px;
+  color: #5149c8;
+  background: rgba(91, 85, 217, 0.1);
+  border: 1px solid rgba(91, 85, 217, 0.2);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.readiness-level.intermediate,
+.readiness-level.advanced {
+  color: #5149c8;
+  background: rgba(91, 85, 217, 0.12);
+  border-color: rgba(91, 85, 217, 0.25);
+}
+
+/* Programme overview statistics */
+.readiness-programme-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 22px 0;
+}
+
+.readiness-programme-stats > div {
+  min-width: 0;
+  padding: 17px;
+  background: var(--page-bg, #f8fafc);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 13px;
+}
+
+.readiness-programme-stats strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text-color, #172554);
+  font-size: 22px;
+  font-weight: 750;
+}
+
+.readiness-programme-stats span {
+  color: var(--secondary-text, #64748b);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Module tags */
+.readiness-module-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0 0 18px;
+}
+
+.readiness-module-tags span {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 9px;
+  color: var(--secondary-text, #64748b);
+  background: var(--page-bg, #f8fafc);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* Deliverables / expected output */
+.readiness-deliverables {
+  padding: 20px;
+  margin: 22px 0;
+  background: var(--page-bg, #f8fafc);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 13px;
+}
+
+.readiness-deliverables h3 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 13px;
+  color: var(--text-color, #172554);
+  font-size: 15px;
+}
+
+.readiness-deliverables ul,
+.readiness-deliverables ol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.readiness-deliverables li {
+  padding-left: 3px;
+  color: var(--secondary-text, #64748b);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Evaluation rubric */
+.readiness-rubric {
+  padding: 21px;
+  margin: 22px 0;
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 14px;
+}
+
+.readiness-rubric h3 {
+  margin: 0 0 8px;
+  color: var(--text-color, #172554);
+  font-size: 16px;
+}
+
+.readiness-rubric > p {
+  margin: 0 0 16px;
+  color: var(--secondary-text, #64748b);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.readiness-rubric-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.readiness-rubric-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 12px 13px;
+  background: var(--page-bg, #f8fafc);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 9px;
+}
+
+.readiness-rubric-row strong {
+  color: var(--text-color, #172554);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.readiness-rubric-row span {
+  flex-shrink: 0;
+  color: #5b55d9;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.readiness-rubric-note {
+  margin-top: 13px;
+  color: var(--secondary-text, #64748b);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Programme guidance note */
+.readiness-programme-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 17px 19px;
+  margin: 22px 0;
+  color: var(--secondary-text, #64748b);
+  background: rgba(91, 85, 217, 0.07);
+  border: 1px solid rgba(91, 85, 217, 0.18);
+  border-radius: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.readiness-programme-note svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #5b55d9;
+}
+
+/* Advanced practice cards */
+.practice-card {
+  overflow: hidden;
+}
+
+.practice-card-header {
+  align-items: flex-start;
+}
+
+.practice-scenario,
+.practice-instructions {
+  overflow-wrap: anywhere;
+}
+
+.practice-self-assessment {
+  scroll-margin-top: 25px;
+}
+
+.practice-checklist-item {
+  padding: 2px 0;
+}
+
+.practice-checklist-item:hover {
+  color: var(--accent-color, #5b55d9);
+}
+
+.practice-answer-status {
+  line-height: 1.6;
+}
+
+/* Dark theme */
+.app-theme.dark .readiness-level,
+.app-theme.dark .readiness-meta-row > span {
+  color: #aaa5ff;
+  background: rgba(111, 104, 235, 0.15);
+  border-color: rgba(111, 104, 235, 0.28);
+}
+
+.app-theme.dark .readiness-programme-stats > div,
+.app-theme.dark .readiness-module-tags span,
+.app-theme.dark .readiness-deliverables,
+.app-theme.dark .readiness-rubric {
+  background: #101010;
+  border-color: #292929;
+}
+
+.app-theme.dark .readiness-rubric-row {
+  background: #171717;
+  border-color: #303030;
+}
+
+.app-theme.dark .readiness-rubric-row span {
+  color: #aaa5ff;
+}
+
+.app-theme.dark .readiness-programme-note {
+  color: #b4b4bd;
+  background: rgba(111, 104, 235, 0.1);
+  border-color: rgba(111, 104, 235, 0.23);
+}
+
+.app-theme.dark .readiness-programme-note svg {
+  color: #aaa5ff;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .readiness-programme-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .readiness-rubric,
+  .readiness-deliverables {
+    padding: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .readiness-programme-stats {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+  .readiness-programme-stats > div {
+    padding: 13px 15px;
+  }
+
+  .readiness-programme-stats strong {
+    font-size: 19px;
+  }
+
+  .readiness-rubric-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .readiness-programme-note {
+    padding: 14px;
+  }
+}
+
+/* Accessibility */
+.readiness-page button:focus-visible,
+.readiness-page input:focus-visible,
+.readiness-page textarea:focus-visible {
+  outline: 3px solid rgba(91, 85, 217, 0.5);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .readiness-page *,
+  .readiness-page *::before,
+  .readiness-page *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* =========================================
+   PROFESSIONAL SCENARIO LAB - COMPACT CARDS
+========================================= */
+
+.practice-list {
+  display: block;
+  column-count: 2;
+  column-gap: 18px;
+}
+
+.practice-card {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 18px;
+  margin: 0 0 18px;
+  break-inside: avoid;
+  vertical-align: top;
+  border-radius: 14px;
+}
+
+/* Compact card heading */
+.practice-card-header {
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.practice-card-header h3 {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.practice-module {
+  margin-bottom: 6px;
+  font-size: 11px;
+}
+
+/* Compact scenario and instructions */
+.practice-scenario,
+.practice-instructions {
+  padding: 12px;
+  margin-bottom: 11px;
+  border-radius: 9px;
+}
+
+.practice-scenario h4,
+.practice-instructions h4 {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.practice-scenario p,
+.practice-instructions p {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Smaller answer area */
+.practice-field-label {
+  margin: 14px 0 7px;
+  font-size: 13px;
+}
+
+.practice-textarea {
+  min-height: 110px;
+  padding: 11px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Compact self-assessment */
+.practice-self-assessment {
+  margin-top: 15px;
+  padding: 13px;
+  border-radius: 10px;
+}
+
+.practice-assessment-heading {
+  margin-bottom: 8px;
+}
+
+.practice-assessment-heading h4 {
+  font-size: 13px;
+}
+
+.practice-self-assessment > p {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.practice-checklist {
+  gap: 9px;
+}
+
+.practice-checklist-item {
+  font-size: 12px;
+}
+
+/* Compact action buttons and sample answers */
+.practice-sample-button {
+  min-height: 39px;
+  margin-top: 13px;
+  padding: 9px 12px;
+  font-size: 13px;
+}
+
+.practice-sample-answer {
+  margin-top: 12px;
+  padding: 13px;
+}
+
+.practice-sample-answer pre {
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .practice-list {
+    column-count: 1;
+  }
+
+  .practice-card {
+    padding: 17px;
+    margin-bottom: 15px;
+  }
+}
+
+/* =========================================
+   SCENARIO LAB - COMPACT HORIZONTAL GRID
+========================================= */
+
+.practice-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 16px;
+}
+
+.practice-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 17px;
+  margin: 0;
+  border-radius: 13px;
+}
+
+.practice-card-header {
+  margin-bottom: 11px;
+  gap: 10px;
+}
+
+.practice-card-title {
+  min-width: 0;
+}
+
+.practice-card-header h3 {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.practice-card-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.practice-saved-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #5b55d9;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.practice-card-preview {
+  margin: 5px 0 13px;
+}
+
+.practice-card-preview p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin: 0;
+  color: var(--text-secondary, #64748b);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.practice-expand-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 39px;
+  margin-top: auto;
+  padding: 9px 12px;
+  color: #ffffff;
+  background: #5b55d9;
+  border: 1px solid #5b55d9;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.practice-expand-button:hover {
+  background: #4942c5;
+}
+
+.practice-expand-button svg {
+  transition: transform 0.2s ease;
+}
+
+.practice-expand-button svg.expanded {
+  transform: rotate(90deg);
+}
+
+.practice-expanded-content {
+  padding-top: 15px;
+}
+
+.practice-expanded-content .practice-scenario,
+.practice-expanded-content .practice-instructions {
+  padding: 13px;
+  margin-bottom: 12px;
+}
+
+.practice-expanded-content .practice-textarea {
+  min-height: 130px;
+}
+
+.practice-expanded-content .practice-self-assessment {
+  margin-top: 15px;
+  padding: 14px;
+}
+
+.practice-expanded-content .readiness-rubric {
+  padding: 14px;
+  margin: 14px 0;
+}
+
+.practice-expanded-content .practice-sample-button {
+  margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+  .practice-list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}

@@ -1,0 +1,755 @@
+
+/* =====================================
+   SKILLBRIDGE AI - LEARNING RESOURCES
+   ===================================== */
+
+.learning-resources-page {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 32px;
+  margin: 24px 0;
+  border-radius: 20px;
+  background: var(--card-bg, #ffffff);
+  color: var(--text-color, #202a44);
+  border: 1px solid var(--border-color, #e1e5f0);
+  box-shadow: 0 6px 24px rgba(32, 42, 68, 0.05);
+  transition: background 0.25s ease, color 0.25s ease,
+    border-color 0.25s ease;
+  overflow: hidden;
+}
+
+/* Header */
+
+.resources-header {
+  margin-bottom: 30px;
+}
+
+.resources-eyebrow {
+  display: inline-block;
+  margin: 0 0 9px;
+  color: var(--accent-color, #5145cd);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.resources-header h2 {
+  margin: 0 0 10px;
+  color: var(--text-color, #202a44);
+  font-size: 28px;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+.resources-header p:last-child {
+  max-width: 650px;
+  margin: 0;
+  color: var(--muted-color, #69748b);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Career Role Selector */
+
+.resources-role {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 26px;
+  padding: 17px 19px;
+  border: 1px solid var(--border-color, #e1e5f0);
+  border-radius: 13px;
+  background: var(--page-bg, #f3f5ff);
+}
+
+.resources-role label {
+  color: var(--text-color, #202a44);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.resources-role select {
+  width: auto;
+  min-width: 230px;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 11px 14px;
+  border: 1px solid var(--border-color, #e1e5f0);
+  border-radius: 10px;
+  background: var(--input-bg, #ffffff);
+  color: var(--text-color, #202a44);
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resources-role select:focus {
+  border-color: var(--accent-color, #5145cd);
+  box-shadow: 0 0 0 3px rgba(81, 69, 205, 0.12);
+}
+
+/* Resource Grid */
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+/* Resource Cards */
+
+.resource-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 23px;
+  border: 1px solid var(--border-color, #e1e5f0);
+  border-radius: 16px;
+  background: var(--card-bg, #ffffff);
+  box-shadow: 0 3px 12px rgba(32, 42, 68, 0.035);
+  animation: resourceCardEnter 0.45s ease both;
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease, background 0.25s ease;
+}
+
+.resource-card:nth-child(2) {
+  animation-delay: 0.05s;
+}
+
+.resource-card:nth-child(3) {
+  animation-delay: 0.1s;
+}
+
+.resource-card:nth-child(4) {
+  animation-delay: 0.15s;
+}
+
+.resource-card:nth-child(5) {
+  animation-delay: 0.2s;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(81, 69, 205, 0.35);
+  box-shadow: 0 12px 25px rgba(32, 42, 68, 0.09);
+}
+
+.resource-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.resource-skill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: var(--accent-light, #e9e7ff);
+  color: var(--accent-color, #5145cd);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.resource-type {
+  color: var(--muted-color, #69748b);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.resource-card h3 {
+  margin: 0 0 10px;
+  color: var(--text-color, #202a44);
+  font-size: 18px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.resource-card p {
+  flex: 1;
+  margin: 0 0 17px;
+  color: var(--muted-color, #69748b);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.resource-platform {
+  margin-bottom: 19px;
+  color: var(--muted-color, #69748b);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+/* Resource Actions */
+
+.resource-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.resource-actions a {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 11px 16px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: var(--accent-color, #5145cd);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.resource-actions a:hover {
+  background: var(--accent-hover, #4035b5);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(81, 69, 205, 0.2);
+}
+
+.resource-actions a:focus-visible {
+  outline: 3px solid rgba(81, 69, 205, 0.35);
+  outline-offset: 3px;
+}
+
+/* =====================================
+   DARK MODE - PURE BLACK + PURPLE
+   ===================================== */
+
+.app-theme.dark .learning-resources-page {
+  background: #000000;
+  color: #f8fafc;
+  border-color: #27272a;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+}
+
+.app-theme.dark .resources-header h2,
+.app-theme.dark .resources-role label {
+  color: #f8fafc;
+}
+
+.app-theme.dark .resources-eyebrow {
+  color: #a5a0ff;
+}
+
+.app-theme.dark .resources-header p:last-child {
+  color: #a1a1aa;
+}
+
+.app-theme.dark .resources-role {
+  background: #101014;
+  border-color: #27272a;
+}
+
+.app-theme.dark .resources-role select {
+  background: #18181b;
+  color: #f8fafc;
+  border-color: #3f3f46;
+}
+
+.app-theme.dark .resources-role select:focus {
+  border-color: #8178f5;
+  box-shadow: 0 0 0 3px rgba(129, 120, 245, 0.15);
+}
+
+.app-theme.dark .resource-card {
+  background: #101010;
+  border-color: #292929;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+}
+
+.app-theme.dark .resource-card:hover {
+  border-color: #5145cd;
+  box-shadow: 0 12px 25px rgba(81, 69, 205, 0.12);
+}
+
+.app-theme.dark .resource-skill {
+  background: #29245c;
+  color: #c7c2ff;
+}
+
+.app-theme.dark .resource-card h3 {
+  color: #f8fafc;
+}
+
+.app-theme.dark .resource-card p,
+.app-theme.dark .resource-platform,
+.app-theme.dark .resource-type {
+  color: #a1a1aa;
+}
+
+.app-theme.dark .resource-actions a {
+  background: #5145cd;
+  color: #ffffff;
+}
+
+.app-theme.dark .resource-actions a:hover {
+  background: #6257e5;
+}
+
+/* =====================================
+   TABLET RESPONSIVENESS
+   ===================================== */
+
+@media (max-width: 900px) {
+  .learning-resources-page {
+    padding: 26px;
+  }
+
+  .resources-grid {
+    gap: 16px;
+  }
+
+  .resource-card {
+    padding: 19px;
+  }
+}
+
+/* =====================================
+   MOBILE RESPONSIVENESS
+   ===================================== */
+
+@media (max-width: 700px) {
+  .learning-resources-page {
+    padding: 20px;
+    margin: 18px 0;
+    border-radius: 16px;
+  }
+
+  .resources-header {
+    margin-bottom: 22px;
+  }
+
+  .resources-header h2 {
+    font-size: 24px;
+  }
+
+  .resources-header p:last-child {
+    font-size: 13px;
+  }
+
+  .resources-role {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 21px;
+    padding: 15px;
+  }
+
+  .resources-role select {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .resources-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 15px;
+  }
+
+  .resource-card {
+    padding: 19px;
+  }
+
+  .resource-card h3 {
+    font-size: 17px;
+  }
+
+  .resource-actions a {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+/* =====================================
+   SMALL MOBILE SCREENS
+   ===================================== */
+
+@media (max-width: 400px) {
+  .learning-resources-page {
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  .resources-header h2 {
+    font-size: 21px;
+  }
+
+  .resources-role {
+    padding: 13px;
+  }
+
+  .resource-card {
+    padding: 15px;
+  }
+
+  .resource-card-top {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .resource-card h3 {
+    font-size: 16px;
+  }
+}
+
+/* =====================================
+   ANIMATIONS
+   ===================================== */
+
+@keyframes resourceCardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================================
+   REDUCED MOTION
+   ===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .learning-resources-page,
+  .resource-card,
+  .resource-actions a,
+  .resources-role select {
+    animation: none;
+    transition: none;
+  }
+
+  .resource-card:hover,
+  .resource-actions a:hover {
+    transform: none;
+  }
+}
+
+/* =====================================
+   RESOURCE DIFFICULTY LABELS
+===================================== */
+
+.resource-difficulty {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.difficulty-beginner {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.difficulty-intermediate {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.difficulty-advanced {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* =====================================
+   RESOURCE COMPLETION BUTTONS
+===================================== */
+
+.resource-actions button {
+  flex: 1;
+  min-width: 0;
+  padding: 11px 14px;
+  border: 1px solid var(--accent-color, #5145cd);
+  border-radius: 9px;
+  background: transparent;
+  color: var(--accent-color, #5145cd);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.resource-actions .resource-mark-complete:hover {
+  background: var(--accent-color, #5145cd);
+  color: #ffffff;
+}
+
+.resource-actions .resource-completed {
+  background: var(--accent-color, #5145cd);
+  color: #ffffff;
+}
+
+.resource-actions .resource-completed:hover {
+  background: var(--accent-hover, #4035b5);
+}
+
+.resource-actions button:focus-visible {
+  outline: 3px solid rgba(81, 69, 205, 0.3);
+  outline-offset: 3px;
+}
+
+/* Dark mode */
+
+.app-theme.dark .difficulty-beginner {
+  background: #082f49;
+  color: #7dd3fc;
+}
+
+.app-theme.dark .difficulty-intermediate {
+  background: #422006;
+  color: #fcd34d;
+}
+
+.app-theme.dark .difficulty-advanced {
+  background: #450a0a;
+  color: #fca5a5;
+}
+
+.app-theme.dark .resource-actions button {
+  border-color: #8178f5;
+  color: #c7c2ff;
+}
+
+.app-theme.dark .resource-actions .resource-completed {
+  background: #5145cd;
+  color: #ffffff;
+}
+
+.app-theme.dark .resource-actions .resource-mark-complete:hover {
+  background: #5145cd;
+  color: #ffffff;
+}
+
+/* Mobile button layout */
+
+@media (max-width: 700px) {
+  .resource-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .resource-actions button,
+  .resource-actions a {
+    width: 100%;
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .resource-actions button {
+    transition: none;
+  }
+}
+
+/* =====================================
+   LEARNING PROGRESS SUMMARY
+===================================== */
+
+.resources-progress {
+  margin-bottom: 26px;
+  padding: 22px;
+  border: 1px solid var(--border-color, #e1e5f0);
+  border-radius: 15px;
+  background: var(--page-bg, #f3f5ff);
+}
+
+.resources-progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 17px;
+}
+
+.resources-progress-header h3 {
+  margin: 0 0 6px;
+  color: var(--text-color, #202a44);
+  font-size: 16px;
+}
+
+.resources-progress-header p {
+  margin: 0;
+  color: var(--muted-color, #69748b);
+  font-size: 13px;
+}
+
+.resources-progress-percentage {
+  color: var(--accent-color, #5145cd);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.resources-progress-track {
+  width: 100%;
+  height: 9px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--border-color, #e1e5f0);
+}
+
+.resources-progress-fill {
+  height: 100%;
+  border-radius: 20px;
+  background: var(--accent-color, #5145cd);
+  transition: width 0.35s ease;
+}
+
+/* Dark mode */
+
+.app-theme.dark .resources-progress {
+  background: #101014;
+  border-color: #27272a;
+}
+
+.app-theme.dark .resources-progress-header h3 {
+  color: #f8fafc;
+}
+
+.app-theme.dark .resources-progress-header p {
+  color: #a1a1aa;
+}
+
+.app-theme.dark .resources-progress-percentage {
+  color: #a5a0ff;
+}
+
+.app-theme.dark .resources-progress-track {
+  background: #292929;
+}
+
+.app-theme.dark .resources-progress-fill {
+  background: #8178f5;
+}
+
+/* Mobile */
+
+@media (max-width: 400px) {
+  .resources-progress {
+    padding: 16px;
+  }
+
+  .resources-progress-header h3 {
+    font-size: 14px;
+  }
+
+  .resources-progress-percentage {
+    font-size: 19px;
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .resources-progress-fill {
+    transition: none;
+  }
+}
+
+/* =====================================
+   LEARNING RESOURCES - LAYOUT IMPROVEMENTS
+===================================== */
+
+/* Stream and career filters */
+
+.resources-role {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  align-items: end;
+  margin: 28px 0;
+}
+
+.resources-filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.resources-filter-field label {
+  display: block;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.resources-filter-field select {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.resources-filter-field select:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+/* Resource cards */
+
+.resource-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Resource action area */
+
+.resource-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+.resource-card .resource-actions button {
+  width: auto;
+  max-width: 100%;
+  min-width: 0;
+  flex: 0 0 auto;
+  padding: 10px 15px;
+  white-space: nowrap;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+/* Responsive layout */
+
+@media (max-width: 650px) {
+  .resources-role {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .resource-actions {
+    align-items: flex-start;
+  }
+
+  .resource-card .resource-actions button {
+    white-space: normal;
+  }
+}
+
